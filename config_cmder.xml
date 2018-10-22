@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-10-21 17:57:38" build="180206">
+		<key name=".Vanilla" modified="2018-10-22 14:46:52" build="180206">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -9,7 +9,7 @@
 			<value name="StartFarFolders" type="hex" data="00"/>
 			<value name="StartFarEditors" type="hex" data="00"/>
 			<value name="StartCreateDelay" type="ulong" data="100"/>
-			<value name="ColorTable00" type="dword" data="001a1e1d"/>
+			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
 			<value name="ColorTable03" type="dword" data="00a6831a"/>
@@ -17,7 +17,7 @@
 			<value name="ColorTable05" type="dword" data="009c5689"/>
 			<value name="ColorTable06" type="dword" data="0049b6b6"/>
 			<value name="ColorTable07" type="dword" data="00cacaca"/>
-			<value name="ColorTable08" type="dword" data="009f9f9f"/>
+			<value name="ColorTable08" type="dword" data="007c7c7c"/>
 			<value name="ColorTable09" type="dword" data="00f58303"/>
 			<value name="ColorTable10" type="dword" data="0006d08d"/>
 			<value name="ColorTable11" type="dword" data="00e5c258"/>
@@ -42,11 +42,11 @@
 			<value name="ColorTable30" type="dword" data="0081cccc"/>
 			<value name="ColorTable31" type="dword" data="00ffffff"/>
 			<value name="ExtendColors" type="hex" data="00"/>
-			<value name="ExtendColorIdx" type="hex" data="02"/>
-			<value name="TextColorIdx" type="hex" data="08"/>
-			<value name="BackColorIdx" type="hex" data="00"/>
-			<value name="PopTextColorIdx" type="hex" data="08"/>
-			<value name="PopBackColorIdx" type="hex" data="00"/>
+			<value name="ExtendColorIdx" type="hex" data="0E"/>
+			<value name="TextColorIdx" type="hex" data="10"/>
+			<value name="BackColorIdx" type="hex" data="10"/>
+			<value name="PopTextColorIdx" type="hex" data="10"/>
+			<value name="PopBackColorIdx" type="hex" data="10"/>
 			<value name="ExtendFonts" type="hex" data="00"/>
 			<value name="ExtendFontNormalIdx" type="hex" data="01"/>
 			<value name="ExtendFontBoldIdx" type="hex" data="0C"/>
@@ -66,7 +66,7 @@
 			<value name="ClipboardDeleteLeftWord" type="hex" data="01"/>
 			<value name="TrueColorerSupport" type="hex" data="01"/>
 			<value name="VividColors" type="hex" data="01"/>
-			<value name="FadeInactive" type="hex" data="01"/>
+			<value name="FadeInactive" type="hex" data="00"/>
 			<value name="FadeInactiveLow" type="hex" data="00"/>
 			<value name="FadeInactiveHigh" type="hex" data="C8"/>
 			<value name="ConVisible" type="hex" data="00"/>
@@ -118,8 +118,8 @@
 			<value name="Multi.SplitWidth" type="hex" data="04"/>
 			<value name="Multi.SplitHeight" type="hex" data="04"/>
 			<value name="KeyboardHooks" type="hex" data="02"/>
-			<value name="FontName" type="string" data="Consolas"/>
-			<value name="FontName2" type="string" data="Lucida Console"/>
+			<value name="FontName" type="string" data="Meslo LG S DZ for Powerline"/>
+			<value name="FontName2" type="string" data="Meslo LG S for Powerline"/>
 			<value name="FontAutoSize" type="hex" data="00"/>
 			<value name="FontSize" type="ulong" data="16"/>
 			<value name="FontSizeX" type="ulong" data="0"/>
@@ -135,7 +135,7 @@
 			<value name="CompressLongStrings" type="hex" data="01"/>
 			<value name="BackGround Image show" type="hex" data="00"/>
 			<value name="BackGround Image" type="string" data="c:\back.bmp"/>
-			<value name="bgImageDarker" type="hex" data="FF"/>
+			<value name="bgImageDarker" type="hex" data="2A"/>
 			<value name="bgImageColors" type="dword" data="ffffffff"/>
 			<value name="bgOperation" type="hex" data="00"/>
 			<value name="bgPluginAllowed" type="hex" data="01"/>
@@ -150,11 +150,11 @@
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="WindowMode" type="dword" data="00000521"/>
-			<value name="ConWnd X" type="long" data="1961"/>
-			<value name="ConWnd Y" type="long" data="292"/>
-			<value name="LastMonitor" type="string" data="1920,0,3000,2560"/>
-			<value name="ConWnd Width" type="dword" data="0000006e"/>
-			<value name="ConWnd Height" type="dword" data="00000038"/>
+			<value name="ConWnd X" type="long" data="0"/>
+			<value name="ConWnd Y" type="long" data="0"/>
+			<value name="LastMonitor" type="string" data="0,0,1440,900"/>
+			<value name="ConWnd Width" type="dword" data="00000088"/>
+			<value name="ConWnd Height" type="dword" data="00000028"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="QuakeStyle" type="hex" data="00"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
@@ -182,7 +182,10 @@
 			<value name="ComSpec.EnvAddExePath" type="hex" data="01"/>
 			<value name="ComSpec.UncPaths" type="hex" data="01"/>
 			<value name="ComSpec.Path" type="string" data=""/>
-			<value name="EnvironmentSet" type="multi"/>
+			<value name="EnvironmentSet" type="multi">
+				<line data="set PATH=%ConEmuBaseDir%\Scripts;%PATH%"/>
+				<line data="chcp utf-8"/>
+			</value>
 			<value name="CTS.Intelligent" type="hex" data="01"/>
 			<value name="CTS.IntelligentExceptions" type="string" data="far|vim.exe"/>
 			<value name="CTS.AutoCopy" type="hex" data="01"/>
@@ -230,7 +233,7 @@
 			<value name="ShellNoZoneCheck" type="hex" data="00"/>
 			<value name="FixAltOnAltTab" type="hex" data="00"/>
 			<value name="UseAltGrayPlus" type="hex" data="01"/>
-			<value name="DisableMouse" type="hex" data="01"/>
+			<value name="DisableMouse" type="hex" data="00"/>
 			<value name="RSelectionFix" type="hex" data="01"/>
 			<value name="MouseSkipActivation" type="hex" data="01"/>
 			<value name="MouseSkipMoving" type="hex" data="01"/>
@@ -258,8 +261,8 @@
 			<value name="StatusBar.Color.Dark" type="dword" data="00a0a0a0"/>
 			<value name="StatusBar.Hide.VCon" type="hex" data="01"/>
 			<value name="StatusBar.Hide.CapsL" type="hex" data="00"/>
-			<value name="StatusBar.Hide.NumL" type="hex" data="01"/>
-			<value name="StatusBar.Hide.ScrL" type="hex" data="00"/>
+			<value name="StatusBar.Hide.NumL" type="hex" data="00"/>
+			<value name="StatusBar.Hide.ScrL" type="hex" data="01"/>
 			<value name="StatusBar.Hide.VisL" type="hex" data="01"/>
 			<value name="StatusBar.Hide.Lang" type="hex" data="01"/>
 			<value name="StatusBar.Hide.KeyHooks" type="hex" data="01"/>
@@ -319,7 +322,7 @@
 			<value name="TabFontHeight" type="long" data="16"/>
 			<value name="SaveAllEditors" type="string" data=""/>
 			<value name="ToolbarAddSpace" type="long" data="0"/>
-			<value name="TabConsole" type="string" data="%s"/>
+			<value name="TabConsole" type="string" data="     %s"/>
 			<value name="TabModifiedSuffix" type="string" data="[*]"/>
 			<value name="TabSkipWords" type="string" data="Administrator:|Администратор:"/>
 			<value name="TabPanels" type="string" data="&lt;%c&gt; %s"/>
@@ -349,7 +352,7 @@
 			<value name="MinimizeOnLoseFocus" type="hex" data="00"/>
 			<value name="DisableFarFlashing" type="hex" data="00"/>
 			<value name="DisableAllFlashing" type="hex" data="00"/>
-			<value name="FindText" type="string" data=""/>
+			<value name="FindText" type="string" data="command"/>
 			<value name="FindMatchCase" type="hex" data="00"/>
 			<value name="FindMatchWholeWords" type="hex" data="00"/>
 			<value name="FindTransparent" type="hex" data="01"/>
@@ -398,7 +401,7 @@
 			<value name="Update.DownloadPath" type="string" data="%TEMP%\ConEmu"/>
 			<value name="Update.LeavePackages" type="hex" data="00"/>
 			<value name="Update.PostUpdateCmd" type="string" data="echo Last successful update&gt;ConEmuUpdate.info &amp;&amp; date /t&gt;&gt;ConEmuUpdate.info &amp;&amp; time /t&gt;&gt;ConEmuUpdate.info"/>
-			<key name="HotKeys" modified="2018-10-21 17:57:38" build="180206">
+			<key name="HotKeys" modified="2018-10-22 14:46:52" build="180206">
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="00000011"/>
 				<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
@@ -408,8 +411,8 @@
 				<value name="CdExplorerPath" type="dword" data="00000000"/>
 				<value name="ForcedFullScreen" type="dword" data="12115b0d"/>
 				<value name="SwitchGuiFocus" type="dword" data="00000000"/>
-				<value name="SetFocusGui" type="dword" data="00000000"/>
-				<value name="SetFocusChild" type="dword" data="00000000"/>
+				<value name="SetFocusGui" type="dword" data="001011d0"/>
+				<value name="SetFocusChild" type="dword" data="001011d1"/>
 				<value name="ChildSystemMenu" type="dword" data="000011ff"/>
 				<value name="Multi.NewConsole" type="dword" data="00000000"/>
 				<value name="Multi.NewConsoleShift" type="dword" data="00001154"/>
@@ -593,8 +596,8 @@
 				<value name="DndRKey" type="hex" data="A2"/>
 				<value name="WndDragKey" type="dword" data="00121101"/>
 			</key>
-			<key name="Tasks" modified="2018-10-21 17:57:38" build="180206">
-				<value name="Count" type="long" data="8"/>
+			<key name="Tasks" modified="2018-10-22 14:46:52" build="180206">
+				<value name="Count" type="long" data="9"/>
 				<key name="Task1" modified="2018-10-21 17:57:38" build="180206">
 					<value name="Name" type="string" data="{cmd::Cmder as Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
@@ -666,6 +669,15 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd /c "%ConEmuDir%\..\git-for-windows\bin\bash --login -i"'/>
+				</key>
+				<key name="Task9" modified="2018-10-22 14:46:52" build="180206">
+					<value name="Name" type="string" data="{docker admin}"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+					<value name="Cmd1" type="string" data='* "C:\Program Files\Git\bin\bash.exe" --login -i "C:\Program Files\Docker Toolbox\start.sh"'/>
 				</key>
 			</key>
 			<key name="Apps" modified="2018-10-21 17:57:38" build="180206">
